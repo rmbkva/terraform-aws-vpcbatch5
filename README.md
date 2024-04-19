@@ -5,7 +5,8 @@
 ```hcl
 module "vpc" {
     source = "rmbkva/vpcbatch5/aws"
-    region = "us-east-2"
+    version = "0.0.4
+    region = "us-east-4"
     vpc_cidr = "10.0.0.0/16"
     subnet1_cidr = "10.0.1.0/24"
     subnet2_cidr = "10.0.2.0/24"
@@ -15,7 +16,11 @@ module "vpc" {
     subnet1_name = "hello1"
     subnet2_name = "hello2"
     subnet3_name = "hello3"
-    ports = [22,80,81]
+    ports = [
+        { from_port = 22, to_port = 22 },
+        { from_port = 80, to_port = 80 },
+        { from_port = 443, to_port = 443 } # Provide list of ports 
+    ]
 
 }
 ```
