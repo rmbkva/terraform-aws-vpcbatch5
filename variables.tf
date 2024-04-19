@@ -47,3 +47,8 @@ variable subnet3_name{
     type = string 
     description = "Provide subnet name"
 }
+
+variable ports {
+  description = "Provide list of 3 ports"
+  type = list 
+}

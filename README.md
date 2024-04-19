@@ -1,6 +1,6 @@
 # terraform-aws-vpcbatch5
 
-Create mait.tf file and input following 
+## Create mait.tf file and input following 
 
 ```hcl
 module "vpc" {
@@ -15,11 +15,12 @@ module "vpc" {
     subnet1_name = "hello1"
     subnet2_name = "hello2"
     subnet3_name = "hello3"
+    ports = [22,80,81]
 
 }
 ```
 
-Create apache.sh file and input a script. Ed.
+## Create apache.sh file and input a script. Ed.
 ```hcl
 #!/bin/bash 
 
