@@ -19,7 +19,8 @@ module "vpc" {
     ports = [
         { from_port = 22, to_port = 22 },
         { from_port = 80, to_port = 80 },
-        { from_port = 443, to_port = 443 } # Provide list of ports 
+        { from_port = 443, to_port = 443 }     
+        # Provide list of ports 
     ]
 
 }
